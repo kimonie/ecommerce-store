@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Homepage from './components/homepage/Homepage'
+
 class App extends Component {
     constructor () {
         super();
@@ -11,7 +13,9 @@ class App extends Component {
 
     render() {
         return (
-            <h1>Hello</h1>
+            <div>
+                <Homepage />
+            </div>
         );
     }
 
