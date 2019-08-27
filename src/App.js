@@ -4,13 +4,14 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Homepage from './pages/homepage/Homepage'
-import Shop from './pages/shop/shop'
+import ShopPage from './pages/shop/Shop'
 
 class App extends Component {
     constructor () {
         super();
 
         this.state = {
+            
         }
     }
 
@@ -19,7 +20,7 @@ class App extends Component {
             <div>
                 <Switch>
                     <Route exact path='/' component={Homepage} />
-                    <Route path='/shop' component={Shop} />
+                    <Route path='/shop' component={ShopPage} />
                 </Switch>
             </div>
         );
