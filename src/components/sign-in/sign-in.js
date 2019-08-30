@@ -1,6 +1,7 @@
 import React from 'react';
 
-import FormInput from '../form-input/form-input'
+import FormInput from '../form-input/form-input';
+import CustomButton from '../custom-button/custom-button';
 
 import './sign-in.scss';
 
@@ -18,13 +19,13 @@ class SignIn extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        this.ListeningStateChangedEvent({ email: '', password: '' })
+        this.state({ email: '', password: '' });
     }
 
     handleChange = event => {
         const { value, name } = event.target;
 
-        this.ListeningStateChangedEvent({ [name]: value })
+        this.setState({ [name]: value })
     } 
     
 
@@ -35,12 +36,23 @@ class SignIn extends React.Component {
                 <span>Sign in with your email and password</span>
 
                 <form onSubmit={this.handleSubmit}>
-                    <FormInput name='email' value={this.state.email} handleChange={this.handleChange}  label='email' required />
-                    <label>Email</label>
-                    <FormInput name='password' type='password' value={this.state.email} handleChange={this.handleChange} label='password' required />
-                    <label>password</label>
-
-                    <input type='Submit' value='submit Form' />
+                    <FormInput 
+                        name='email' 
+                        type='email'
+                        value={this.state.email} 
+                        handleChange={this.handleChange}  
+                        label='email' 
+                        required 
+                    />
+                    <FormInput 
+                        name='password' 
+                        type='password' 
+                        value={this.state.email} 
+                        handleChange={this.handleChange} 
+                        label='password' 
+                        required 
+                    />
+                    <CustomButton type='Submit'>SIGN IN</CustomButton>
                 </form>
             </div>
         )
