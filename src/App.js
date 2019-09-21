@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 
 import './App.css';
 
-import Homepage from './pages/homepage/Homepage'
-import ShopPage from './pages/shop/Shop'
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up'
+import Homepage from './pages/homepage/Homepage';
+import ShopPage from './pages/shop/Shop';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up';
 
-import Header from './components/header/header'
-import  { auth, createUserProfileDocument } from './firebase/firebase.util'
+import Header from './components/header/header';
+import  { auth, createUserProfileDocument } from './firebase/firebase.util';
 import { setCurrentUser } from './redux/user/user.action';
 
 
